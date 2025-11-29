@@ -1,0 +1,32 @@
+# Kolibri Knowledge Base: Basic Examples
+# Format: PATTERN -> ACTION | CONFIDENCE | TAGS
+
+# Greetings
+"hello" -> "Hello! How can I help you today?" | 0.95 | "greeting"
+"hi" -> "Hi there! What would you like to know?" | 0.95 | "greeting"
+"hey" -> "Hey! Ready to help you explore knowledge." | 0.90 | "greeting"
+"good morning" -> "Good morning! Let's start learning!" | 0.90 | "greeting,time"
+"good evening" -> "Good evening! What's on your mind?" | 0.90 | "greeting,time"
+
+# Farewells
+"bye" -> "Goodbye! Keep learning!" | 0.90 | "farewell"
+"goodbye" -> "See you later! Stay curious!" | 0.90 | "farewell"
+"thanks" -> "You're welcome! Happy to help." | 0.90 | "gratitude"
+"thank you" -> "My pleasure! Come back anytime." | 0.90 | "gratitude"
+
+# Questions
+"what is {X}" -> "{X} is a concept that can be explored further. Try asking more specific questions." | 0.70 | "question,definition"
+"who is {X}" -> "{X} is someone or something worth learning about." | 0.70 | "question,identity"
+"where is {X}" -> "{X} can be found by exploring related topics." | 0.70 | "question,location"
+"when was {X}" -> "The timing of {X} depends on context and history." | 0.70 | "question,time"
+"why is {X}" -> "The reason for {X} involves multiple factors." | 0.70 | "question,reason"
+"how does {X}" -> "Understanding how {X} works requires exploring its components." | 0.70 | "question,process"
+
+# About Kolibri
+"what is kolibri" -> "Kolibri is a compact, decentralized knowledge engine that stores knowledge as mathematical formulas." | 0.95 | "kolibri,about"
+"tell me about kolibri" -> "Kolibri AI uses a 10-symbol encoding system, fractal memory hierarchy, and micro-blockchain for knowledge versioning." | 0.95 | "kolibri,about"
+"how does kolibri work" -> "Kolibri matches patterns in your questions to formulas, then generates answers using variable substitution." | 0.90 | "kolibri,process"
+
+# Help
+"help" -> "Type /help to see available commands, or just ask a question!" | 0.95 | "help"
+"what can you do" -> "I can answer questions using my knowledge base. Try /list to see available formulas." | 0.90 | "help,capability"
