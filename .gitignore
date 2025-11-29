@@ -29,6 +29,7 @@ test_formulas
 Thumbs.db
 
 # CMake build directories
+cmake_build/
 CMakeFiles/
 CMakeCache.txt
 cmake_install.cmake
