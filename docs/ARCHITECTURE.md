@@ -2,13 +2,24 @@
 
 ## System Design
 
-Kolibri AI is built as a layered system:
+Kolibri AI is built as a layered system with a C11 core engine.
 
-### Layer 1: Core Engine (C/WASM)
-- Decimal cognition: 0-9 impulse transduction
-- Formula evolution: Genetic algorithm for formula discovery
-- Fractal hierarchy: 10-nested digit structure
-- Memory management: Optimized for embedded/browser execution
+### Layer 1: Core Engine (C11)
+
+The core engine is implemented in portable C11 with no external dependencies.
+
+**Components:**
+- `kolibri_core.c` - Formula pattern matching and query engine
+- `kolibri_memory.c` - Fractal memory tree (10-child nodes)
+- `kolibri_blockchain.c` - SHA256 hashing and chain validation
+- `kolibri_storage.c` - Knowledge base persistence
+- `kolibri_cli.c` - Interactive REPL interface
+
+**Key Features:**
+- 10-symbol encoding system (digits 0-9 for entity types)
+- Pattern matching with variable extraction
+- Confidence-based formula selection
+- Blockchain for knowledge versioning
 
 ### Layer 2: Compression (JavaScript)
 - Pattern detection: Analyzes data for repeating sequences

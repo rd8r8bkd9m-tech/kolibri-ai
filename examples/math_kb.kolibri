@@ -1,0 +1,39 @@
+# Kolibri Knowledge Base: Math Formulas
+# Format: PATTERN -> ACTION | CONFIDENCE | TAGS
+
+# Basic Math Operations
+"what is {X} plus {Y}" -> "The sum of {X} and {Y} requires numeric calculation." | 0.80 | "math,addition"
+"what is {X} minus {Y}" -> "The difference of {X} minus {Y} is a subtraction operation." | 0.80 | "math,subtraction"
+"what is {X} times {Y}" -> "The product of {X} multiplied by {Y} is a multiplication." | 0.80 | "math,multiplication"
+"what is {X} divided by {Y}" -> "The quotient of {X} divided by {Y} is a division (Y must not be zero)." | 0.80 | "math,division"
+
+# Math Concepts
+"what is addition" -> "Addition is the mathematical operation of combining two or more numbers to get a sum." | 0.95 | "math,concept"
+"what is subtraction" -> "Subtraction is finding the difference between two numbers." | 0.95 | "math,concept"
+"what is multiplication" -> "Multiplication is repeated addition, scaling one number by another." | 0.95 | "math,concept"
+"what is division" -> "Division is splitting a number into equal parts or groups." | 0.95 | "math,concept"
+
+# Geometry
+"what is a triangle" -> "A triangle is a polygon with three edges and three vertices." | 0.95 | "geometry,shape"
+"what is a circle" -> "A circle is a shape where all points are equidistant from the center." | 0.95 | "geometry,shape"
+"what is a square" -> "A square is a quadrilateral with four equal sides and four right angles." | 0.95 | "geometry,shape"
+"what is pi" -> "Pi (π) is approximately 3.14159, the ratio of a circle's circumference to its diameter." | 0.95 | "math,constant"
+
+# Algebra
+"what is algebra" -> "Algebra is the study of mathematical symbols and rules for manipulating them." | 0.95 | "math,algebra"
+"what is a variable" -> "A variable is a symbol representing an unknown value in expressions." | 0.95 | "algebra,concept"
+"what is an equation" -> "An equation states that two expressions are equal, often used to solve for unknowns." | 0.95 | "algebra,concept"
+"what is a function" -> "A function is a relation that maps each input to exactly one output." | 0.95 | "algebra,concept"
+
+# Calculus
+"what is calculus" -> "Calculus is the mathematical study of continuous change, using derivatives and integrals." | 0.95 | "math,calculus"
+"what is a derivative" -> "A derivative measures the rate of change of a function at any point." | 0.95 | "calculus,concept"
+"what is an integral" -> "An integral calculates the area under a curve or accumulated quantity." | 0.95 | "calculus,concept"
+"what is a limit" -> "A limit describes the behavior of a function as its input approaches a value." | 0.95 | "calculus,concept"
+
+# Number Theory
+"what is a prime number" -> "A prime number is a natural number greater than 1 with exactly two factors: 1 and itself." | 0.95 | "math,number_theory"
+"what is an even number" -> "An even number is divisible by 2 with no remainder." | 0.95 | "math,number_theory"
+"what is an odd number" -> "An odd number has a remainder of 1 when divided by 2." | 0.95 | "math,number_theory"
+"what is zero" -> "Zero is the integer denoting no quantity, the additive identity." | 0.95 | "math,number"
+"what is infinity" -> "Infinity represents an unbounded quantity, larger than any real number." | 0.95 | "math,concept"
