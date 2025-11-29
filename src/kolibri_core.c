@@ -279,9 +279,11 @@ static bool match_pattern(const char* pattern, const char* input,
                 vals[*var_count][val_len] = '\0';
                 i = next_lit;
             } else {
-                /* Capture rest of input */
-                strncpy(vals[*var_count], val_start, 255);
-                vals[*var_count][255] = '\0';
+                /* Capture rest of input - leave room for null terminator */
+                size_t copy_len = strlen(val_start);
+                if (copy_len > 254) copy_len = 254;
+                strncpy(vals[*var_count], val_start, copy_len);
+                vals[*var_count][copy_len] = '\0';
                 i += strlen(vals[*var_count]);
             }
             (*var_count)++;

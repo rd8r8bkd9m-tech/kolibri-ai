@@ -82,7 +82,8 @@ TEST(validate_tampered_chain) {
     kolibri_chain_add_block(chain, "Block 2");
     
     /* Tamper with block data */
-    strcpy(chain->blocks[1].data, "TAMPERED");
+    strncpy(chain->blocks[1].data, "TAMPERED", sizeof(chain->blocks[1].data) - 1);
+    chain->blocks[1].data[sizeof(chain->blocks[1].data) - 1] = '\0';
     
     bool valid = kolibri_chain_validate(chain);
     assert(valid == false);
