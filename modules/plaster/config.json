@@ -1,0 +1,228 @@
+{
+  "name": "plaster",
+  "version": "1.0.0",
+  "description": "Kolibri Platform module for plaster works management (Модуль для штукатурных работ)",
+  "displayName": "PLASTER - Управление штукатурными работами",
+  "author": "Kolibri Platform",
+  "license": "AGPL-3.0",
+  "enabled": true,
+  "features": {
+    "projects": {
+      "enabled": true,
+      "description": "Управление проектами штукатурных работ"
+    },
+    "materials": {
+      "enabled": true,
+      "description": "Учет и калькуляция материалов"
+    },
+    "workers": {
+      "enabled": true,
+      "description": "Управление рабочими и производительностью"
+    },
+    "quality": {
+      "enabled": true,
+      "description": "Контроль качества с чек-листами"
+    },
+    "financials": {
+      "enabled": true,
+      "description": "Финансовый учет и сметы"
+    },
+    "ai_diagnosis": {
+      "enabled": true,
+      "description": "AI анализ дефектов по фото"
+    },
+    "ml_prediction": {
+      "enabled": true,
+      "description": "ML прогноз сроков и рисков"
+    },
+    "cost_estimation": {
+      "enabled": true,
+      "description": "ML расчет сметы"
+    }
+  },
+  "plasterTypes": [
+    {
+      "id": "leveling",
+      "name": "Выравнивающая",
+      "nameEn": "Leveling",
+      "description": "Основное выравнивание поверхности",
+      "avgThickness": 15,
+      "consumptionPerMm": 1.5
+    },
+    {
+      "id": "decorative",
+      "name": "Декоративная",
+      "nameEn": "Decorative",
+      "description": "Декоративное покрытие",
+      "avgThickness": 3,
+      "consumptionPerMm": 1.8
+    },
+    {
+      "id": "finish",
+      "name": "Финишная",
+      "nameEn": "Finish",
+      "description": "Финишная отделка под покраску",
+      "avgThickness": 2,
+      "consumptionPerMm": 1.2
+    },
+    {
+      "id": "gypsum",
+      "name": "Гипсовая",
+      "nameEn": "Gypsum",
+      "description": "Гипсовая штукатурка для внутренних работ",
+      "avgThickness": 10,
+      "consumptionPerMm": 0.9
+    },
+    {
+      "id": "cement",
+      "name": "Цементная",
+      "nameEn": "Cement",
+      "description": "Цементная штукатурка для влажных помещений",
+      "avgThickness": 20,
+      "consumptionPerMm": 1.8
+    }
+  ],
+  "workStages": [
+    {
+      "id": "preparation",
+      "name": "Подготовка",
+      "nameEn": "Preparation",
+      "description": "Очистка и подготовка поверхности",
+      "order": 1
+    },
+    {
+      "id": "priming",
+      "name": "Грунтовка",
+      "nameEn": "Priming",
+      "description": "Нанесение грунтовки",
+      "order": 2
+    },
+    {
+      "id": "beacon_setup",
+      "name": "Установка маяков",
+      "nameEn": "Beacon Setup",
+      "description": "Установка направляющих маяков",
+      "order": 3
+    },
+    {
+      "id": "application",
+      "name": "Нанесение",
+      "nameEn": "Application",
+      "description": "Нанесение штукатурной смеси",
+      "order": 4
+    },
+    {
+      "id": "leveling_stage",
+      "name": "Выравнивание",
+      "nameEn": "Leveling Stage",
+      "description": "Выравнивание и затирка",
+      "order": 5
+    },
+    {
+      "id": "finishing",
+      "name": "Отделка",
+      "nameEn": "Finishing",
+      "description": "Финишная отделка и шлифовка",
+      "order": 6
+    }
+  ],
+  "qualityChecklist": [
+    {
+      "id": "evenness",
+      "name": "Ровность поверхности",
+      "nameEn": "Surface Evenness",
+      "tolerance": "2mm на 2м"
+    },
+    {
+      "id": "adhesion",
+      "name": "Адгезия",
+      "nameEn": "Adhesion",
+      "tolerance": "0.3 МПа"
+    },
+    {
+      "id": "thickness",
+      "name": "Толщина слоя",
+      "nameEn": "Layer Thickness",
+      "tolerance": "±2mm"
+    },
+    {
+      "id": "cracks",
+      "name": "Отсутствие трещин",
+      "nameEn": "No Cracks",
+      "tolerance": "0"
+    },
+    {
+      "id": "corners",
+      "name": "Прямолинейность углов",
+      "nameEn": "Corner Straightness",
+      "tolerance": "3mm на 2м"
+    },
+    {
+      "id": "moisture",
+      "name": "Влажность",
+      "nameEn": "Moisture",
+      "tolerance": "<8%"
+    }
+  ],
+  "defectTypes": [
+    {
+      "id": "crack",
+      "name": "Трещина",
+      "nameEn": "Crack",
+      "severity": "high"
+    },
+    {
+      "id": "chip",
+      "name": "Скол",
+      "nameEn": "Chip",
+      "severity": "medium"
+    },
+    {
+      "id": "unevenness",
+      "name": "Неровность",
+      "nameEn": "Unevenness",
+      "severity": "medium"
+    },
+    {
+      "id": "delamination",
+      "name": "Отслоение",
+      "nameEn": "Delamination",
+      "severity": "critical"
+    },
+    {
+      "id": "efflorescence",
+      "name": "Высолы",
+      "nameEn": "Efflorescence",
+      "severity": "medium"
+    },
+    {
+      "id": "mold",
+      "name": "Плесень",
+      "nameEn": "Mold",
+      "severity": "critical"
+    }
+  ],
+  "api": {
+    "basePath": "/api/plaster",
+    "version": "v1",
+    "rateLimit": 100,
+    "timeout": 30000
+  },
+  "database": {
+    "schema": "plaster",
+    "migrationsDir": "./migrations"
+  },
+  "storage": {
+    "imagesPath": "/uploads/plaster/images",
+    "documentsPath": "/uploads/plaster/documents",
+    "maxImageSize": 10485760,
+    "maxDocumentSize": 52428800,
+    "allowedImageTypes": ["image/jpeg", "image/png", "image/webp"],
+    "allowedDocumentTypes": ["application/pdf", "application/vnd.ms-excel", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"]
+  },
+  "kolibriIntegration": {
+    "aiEndpoint": "/api/kolibri/diagnose",
+    "mlEndpoint": "/api/kolibri/predict",
+    "compressionEnabled": true
+  }
+}
